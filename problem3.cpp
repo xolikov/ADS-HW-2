@@ -60,16 +60,10 @@ int main() {
             int x;
             cin >> x;
             pq.insert(x);
-        } else if (cmd == "get") {
-            string sub;
-            cin >> sub;
-            if (sub == "max")
-                pq.get_max();
-        } else if (cmd == "extract") {
-            string sub;
-            cin >> sub;
-            if (sub == "max")
-                pq.extract_max();
+        } else if (cmd == "get_max") {
+            pq.get_max();
+        } else if (cmd == "extract_max") {
+            pq.extract_max();
         } else if (cmd == "size") {
             pq.size();
         }
