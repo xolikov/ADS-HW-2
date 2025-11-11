@@ -18,10 +18,8 @@ public:
         }
 
         int mx = A[0];
-        for (int v: A) {
+        for (int v: A)
             if (v > mx) mx = v;
-        }
-
         cout << mx << endl;
     }
 
@@ -33,8 +31,7 @@ public:
 
         int mx = A[0];
         int idx = 0;
-
-        for (int i = 1; i < static_cast<int>(A.size()); i++) {
+        for (int i = 1; i < (int) A.size(); i++) {
             if (A[i] > mx) {
                 mx = A[i];
                 idx = i;
@@ -66,11 +63,13 @@ int main() {
         } else if (cmd == "get") {
             string sub;
             cin >> sub;
-            pq.get_max();
+            if (sub == "max")
+                pq.get_max();
         } else if (cmd == "extract") {
             string sub;
             cin >> sub;
-            pq.extract_max();
+            if (sub == "max")
+                pq.extract_max();
         } else if (cmd == "size") {
             pq.size();
         }
